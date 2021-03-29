@@ -1,0 +1,5 @@
+opencv-python==4.5.1.48
+ipython==7.19.0
+ipywidgets==7.6.3
+numpy==1.20.1
+Pillow==8.1.2
