@@ -26,7 +26,7 @@ def resize_img(img, width=640, height=480):
     return img_re
 
 # identify cone
-def identify_cone(img, HSV_LOWER, HSV_UPPER, EXIST_SIZE):
+def identify_object(img, HSV_LOWER, HSV_UPPER, EXIST_SIZE):
     img_cp = np.copy(img)
     
     def find_contours(img):
