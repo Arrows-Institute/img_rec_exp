@@ -31,6 +31,8 @@ def identify_object(img, HSV_LOWER, HSV_UPPER, EXIST_SIZE):
     
     def find_contours(img):
         hsv=cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+        HSV_LOWER[0] /= 2
+        HSV_UPPER[0] /= 2
         mask = cv2.inRange(hsv, HSV_LOWER, HSV_UPPER)
         contours,inv=cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         return contours, mask
